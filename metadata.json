@@ -1,0 +1,40 @@
+{
+    "files": [
+        "linuxamd64_12102_database_1of2.zip",
+        "linuxamd64_12102_database_2of2.zip"
+    ],
+    "opatch": [
+    	"p6880880_121010_Linux-x86-64.zip"
+    ],
+    "patches": [
+        "p21948354_121020_Linux-x86-64.zip",
+        "p22139226_121020_Linux-x86-64.zip"
+    ],
+    "listener": {
+    	"name": "LISTENER",
+		"protocols": [
+			{"protocol": "TCP", "port": 1521}
+		]
+    },
+    "netservicename": {
+    	"name": "EXTPROC_CONNECTION_DATA",
+		"service": "PLSExtProc",
+		"protocols": [
+			{"protocol": "TCP", "servertype": "HOSTNAME", "port": 1521}
+		]
+    },
+    "instance": {
+    	"type": "OLTP",
+    	"template": "General_Purpose.dbc",
+    	"global-database-name": "orcl.justinpaul.com",
+    	"character-set": "AL32UTF8",
+    	"national-character-set": "AL16UTF16",
+    	"automatic-memory-management": "true",
+    	"total-memory": 1024,
+    	"init-parameters": [
+    		"processes=300"
+    	],
+    	"sys-password": "welcome1",
+    	"system-password": "welcome1"
+    }
+}
