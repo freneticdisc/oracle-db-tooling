@@ -9,6 +9,12 @@ Apart from these requirements, these scripts use python to perform its tasks. Th
 ### Usage
 To install the Oracle Database Software, download the zip archives and make it available in the installer_location. There is no need to extract the software; the script will take care of it.
 
+There is a wrapper script available that you can use to execute one or more scripts in order. The usage of the script is as follows:
+
+`/usr/bin/python main.py [-?ipc] -l installers_patches_location -o oracle_base [-h oracle_home] [-n global-database-name] [-w password_file] [--sid sid] [--hostname host_name] [--rsp_file response_file] [--tmp_loc tmp_location] [--inst_group install_group] [--dba_group dba_group] [--oper_group oper_group] [--backupdba_group backupdba_group] [--dgdba_group dgdba_group] [--kmdba_group kmdba_group] [--inventory_loc inventory_loc] [--ocmrsp_file ocm_response_file] [--sys_password sys_password] [--system_password system_password] [--delete] [--start | --stop]`
+
+If you want to have more fine grained control on the install and configure process, you could use the individual scripts. The usage of these scripts is shown below:
+
 To install the software:
 
 `/usr/bin/python install_db.py [-?] -l installers_location -o oracle_base [-h oracle_home] [--hostname host_name] [--rsp_file install_response_file] [--tmp_loc tmp_location] [--inst_group install_group] [--dba_group dba_group] [--oper_group oper_group] [--backupdba_group backupdba_group] [--dgdba_group dgdba_group] [--kmdba_group kmdba_group] [--inventory_loc inventory_loc]`
